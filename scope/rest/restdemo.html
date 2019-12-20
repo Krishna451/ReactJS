@@ -1,0 +1,41 @@
+<script>
+
+function add(){
+
+let res=0;
+
+for(let i=0;i<arguments.length;i++){
+
+    res=res+arguments[i];
+}
+console.log("sum using arguments "+ res);
+
+}
+
+function sum(op,...num){
+    let res=0;
+for(let i=0;i<num.length;i++){
+
+res=res+num[i];
+}
+console.log(op+" "+ res);
+}
+
+
+function square(...num){
+
+    let res=num.map(x=>x*x);
+    console.log("square is "+ res);
+}
+square(3,4,5,6);
+
+sum(40,70,80);
+
+
+
+add(40,20);
+add(30,70,90);
+
+
+
+</script>

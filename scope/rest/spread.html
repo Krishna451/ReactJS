@@ -1,0 +1,16 @@
+
+<script>
+
+function myfun(x,y,z){
+    console.log(x+" "+y+" "+z);
+}
+
+let args=[3,5,6];
+myfun.apply(null,args);// converts iterable into individual arguments
+myfun(...args); //converts iterable into individual arguments using spread operator
+
+let arr=[12,67,89];
+console.log(arr);
+let arr1=[34,...arr];
+console.log(arr1) //creates a new array by copying the value from old array
+</script>

@@ -1,0 +1,57 @@
+<script>
+
+    class Employee{
+
+        constructor(eid,name){
+
+            this.eid=eid;
+            this.name=name;
+
+        }
+
+    print(){
+        console.log("employee id: "+this.eid+" employee name: "+this.name); 
+    }
+
+    }
+
+ let e=new Employee(111,"Bhargav");
+ e.print();
+
+  class RegularEmployee extends Employee {
+
+    constructor(eid,name,dept,sal){
+
+        super(eid,name)
+        this.dept=dept;
+        this.sal=sal;
+    }
+    print(){
+
+        super.print();
+        console.log("employee id: "+this.eid+" employee name: "+this.name+ " Dept: "+this.dept+" Salary: "+this.sal); 
+    }
+
+ }
+
+ let e1=new RegularEmployee("222","Bhargav","Dev",50000)
+ e1.print();
+
+ class ContractEmployee extends Employee{
+    constructor(eid,name,dept,sal){
+
+super(eid,name)
+this.dept=dept;
+this.sal=sal;
+}
+print(){
+
+super.print();
+console.log("employee id: "+this.eid+" employee name: "+this.name+ " Dept: "+this.dept+" Salary: "+this.sal); 
+}
+ }
+
+ let e2=new ContractEmployee("333","Krishna","Dev",60000)
+ e2.print();
+
+</script>

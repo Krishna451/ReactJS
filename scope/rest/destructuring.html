@@ -1,0 +1,35 @@
+<script>
+
+    let number=[30,60,90,100]; // index based
+    let x=number[0];
+    let y=number[1];
+
+    console.log(x+" "+y)
+
+    let [first,second]=number; //destructuring
+    console.log(first+ " " + second);
+
+    let[f,,third]=number;
+    console.log(f+ " " + third);
+
+    let[f1,...rest]=number;
+    console.log(f1+ " " + rest);
+
+   
+   
+   
+   let person={
+        name:"Bhargav",
+        age:30
+    }
+
+    let nm=person.name;
+    console.log(nm);
+    let{name}=person;
+    console.log(name);
+    let{name:mnm,age:a}=person;
+    console.log(mnm+" "+a);
+
+    
+
+</script>

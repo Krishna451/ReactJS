@@ -1,0 +1,54 @@
+<script>
+
+let empInfo=[
+
+{name:"Mike",dept:"HR",salary:"20000",type:"regular"},
+{name:"Joe",dept:"Account",salary:"30000",type:"contract"},
+{name:"Max",dept:"IT",salary:"50000",type:"regular"}
+];
+
+var deptInfo=[] // using push method to iterate dept
+for(let i=0;i<empInfo.length;i++){
+    deptInfo.push(empInfo[i].dept)
+}
+console.log(deptInfo)
+
+/*----------------------------*/
+
+empInfo.map(x=>{         //map and arrow function to display dept names
+    console.log(x.dept)
+})
+
+/*----------------------------*/
+var deptInfo=empInfo.map(function(empInfo){ //anonymous function to display dept names
+
+    return empInfo.dept
+});
+console.log(deptInfo)
+/*----------------------------*/
+
+var Totalsalary=empInfo.reduce(function (Salaries, employee){ //Total Salaries
+
+    return Salaries+employee.salary
+},0)
+console.log(Totalsalary)
+
+/*----------------------------*/
+//Total Salaries by using reduce and arrow function
+const totalsalary= empInfo.reduce((sal,emp)=> sal+emp.salary,0);
+console.log(totalsalary)
+
+/*----------------------------*/
+// anonymous function employee information whose salary greater than equal to 30000
+var salary=empInfo.filter(function(sal){
+
+    return sal.salary>=30000;
+})
+console.log(salary)
+
+/*----------------------------*/
+// arrow function employee information whose salary greater than equal to 30000
+
+const salary1=empInfo.filter(sal=>sal.salary>=30000);
+console.log(salary1)
+</script>

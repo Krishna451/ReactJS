@@ -1,0 +1,41 @@
+<script>
+
+class person{
+
+    constructor(name,sal,age){
+        this.name=name;
+        this.sal=sal;
+        this.age=age;
+    }
+
+    getinfo(){
+
+        console.log(`Name: ${this.name} salary: ${this.sal} age: ${this.age}`);
+    }
+}
+
+let p1=new person("Bhargav",70000,28);
+let p2=new person("krishna",80000,27);
+p1.getinfo();
+p2.getinfo();
+
+class employee extends person{
+
+    constructor(name,sal,age,dept){
+
+        super(name,sal,age)
+        this.dept=dept;
+    }
+
+    getinfo(){
+        //console.log(`Name: ${this.name} salary: ${this.sal} age: ${this.age}`);
+        super.getinfo();
+        console.log(`dept: ${this.dept}`);
+    }
+
+}
+
+let e1=new employee("Bhargav",70000,30,"dev");
+
+e1.getinfo();
+</script>

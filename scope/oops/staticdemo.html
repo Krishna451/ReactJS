@@ -1,0 +1,36 @@
+<script>
+
+class employee{
+
+static cname="Bhargav";
+
+static sayHello(){
+
+return "Hello.."
+}
+
+static greet(){
+    console.log(this.sayHello()+this.cname);
+}
+
+getEmp(name,age){
+
+    this.name=name;
+    this.age=age;
+}
+
+printInfo(){
+
+    console.log("emp Info: "+ this.cname+ " Name: "+this.name+" age : "+this.age);
+}
+
+}
+
+let emp=new employee();
+employee.greet();
+emp.getEmp("Bhargav",28);
+emp.printInfo();
+
+
+
+</script>
